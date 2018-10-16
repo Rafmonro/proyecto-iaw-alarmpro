@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Usuarios</h2>
+    <ul>
+
+        {% for usuario in object_list %}
+            <li>
+            	{{ usuario.nombre_usuario }} - 
+            	{{ usuario.primer_apellido }} - 
+            	{{ usuario.segundo_apellido }} - 
+            	{{ usuario.alias }}
+            </li>
+            
+        {% endfor %}
+
+    </ul>
+
+{% endblock %}

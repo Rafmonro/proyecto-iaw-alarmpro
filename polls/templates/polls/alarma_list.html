@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Alarmas</h2>
+    <ul>
+        {% for alar in object_list %}
+            <li>{{ alar.longitud }} - 
+            	{{ alar.latitud }} - 
+            	{{ alar.calendario }} - 
+            	{{ alar.usuario }} - 
+            	{{ alar.timbre }} - 
+
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
