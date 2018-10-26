@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Timbres</h2>
+    <ul>
+        {% for tim in object_list %}
+            <li>{{ tim.nombre_timbre }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
