@@ -6,10 +6,12 @@
 
         {% for usuario in object_list %}
             <li>
-            	{{ usuario.nombre_usuario }} - 
-            	{{ usuario.primer_apellido }} - 
-            	{{ usuario.segundo_apellido }} - 
+            	{{ usuario.user.username }} - 
+            	{{ usuario.user.first_name }} - 
+            	{{ usuario.last_name }} - 
             	{{ usuario.alias }}
+            	{{ usuario.pk }}
+
             </li>
             
         {% endfor %}

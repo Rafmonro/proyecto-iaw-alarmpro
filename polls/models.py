@@ -8,9 +8,6 @@ from django.dispatch import receiver
 
 class Usuario(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	nombre_usuario = models.CharField(max_length=200)
-	primer_apellido = models.CharField(max_length=200)
-	segundo_apellido = models.CharField(max_length=200)
 	alias = models.CharField(max_length=200)
 
 	def __unicode__(self):
@@ -22,7 +19,6 @@ def update_user_usuario(sender, instance, created, **kwargs):
 	if created:
 		Usuario.objects.create(user=instance)
 	instance.usuario.save()
-
 
 
 class Alarma(models.Model):

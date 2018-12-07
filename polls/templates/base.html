@@ -2,6 +2,20 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
+
+
+    <div>
+	{% csrf_token %}
+	{% if user.is_authenticated %}
+		<p> USUARIO: {{ user.get_username }}</p>
+		<p><a href="{% url 'Logout' %}">Cerrar sesion</a></p>
+	{% else %}
+		<p>Usuario anonimo.</p>
+		<p><a href="{% url 'signup' %}">Registrarse</a> / <a href="{% url 'Login' %}">Iniciar Sesion</a></p>
+	{% endif %}
+</div>
+
+
 </head>
 <body>
     {% block content %}{% endblock %}

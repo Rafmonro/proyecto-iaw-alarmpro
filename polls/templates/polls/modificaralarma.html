@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+    	{{ form.nombre_alarma }}
+	</br>
+		{{ form.longitud }}
+	</br>
+		{{ form.latitud }}
+	</br>
+		{{ form.timbre }}
+	</br>	
+		{{ form.calendario }}
+	</br>
+		{{ form.usuario }}
+    <input type="submit" value="Modificar" />
+</form>
+
+{% endblock %}

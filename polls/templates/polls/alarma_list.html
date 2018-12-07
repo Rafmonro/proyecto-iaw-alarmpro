@@ -5,11 +5,12 @@
     <ul>
         {% for alar in object_list %}
             <li>{{ alar.longitud }} - 
-            	{{ alar.latitud }} - 
+            	{{ alar.latitud }} -
+            	{{ alar.nombre_alarma }} - 
             	{{ alar.calendario }} - 
-            	{{ alar.usuario }} - 
-            	{{ alar.timbre }} - 
-
+            	{{ alar.usuario.user.username }} - 
+            	{{ alar.timbre }} -
+            	{{ alar.pk }}
             </li>
         {% endfor %}
     </ul>

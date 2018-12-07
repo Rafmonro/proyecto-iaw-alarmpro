@@ -4,7 +4,7 @@
     <h2>Timbres</h2>
     <ul>
         {% for tim in object_list %}
-            <li>{{ tim.nombre_timbre }}</li>
+            <li>{{ tim.nombre_timbre }} - {{ tim.pk }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
